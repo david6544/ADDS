@@ -9,7 +9,7 @@ Computer::Computer() {
 }
 
 Move* Computer::makeMove() {
-    std::string Cmove = "Ninja";
+    std::string Cmove = "Rock";
     Move* Compmove = mvlist->checkValidMove(Cmove);
     //std::cout << Compmove->getName() << std::endl;
     return Compmove;

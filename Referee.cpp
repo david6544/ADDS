@@ -15,8 +15,8 @@ Player* Referee::refGame(Player * p1, Player * p2) {
     Move* m2 = p2->makeMove();
     
 
-    std::cout << p1->getName() << " plays " << m1->getName() << std::endl;
-    std::cout << p2->getName() << " plays " << m2->getName() << std::endl;
+    //std::cout << p1->getName() << " plays " << m1->getName() << std::endl;
+    //std::cout << p2->getName() << " plays " << m2->getName() << std::endl;
     //std::cout << m1->getlosses().size() << " " << m2->getlosses().size() << std::endl;
 
     //Checks which player wins

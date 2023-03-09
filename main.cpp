@@ -11,12 +11,12 @@ int main(void) {
 
 
     Referee* ref = new Referee();
-    Human p1;
+    Human p1("John");
     Computer c1;
 
     Player* winner = ref->refGame(&p1,&c1);
 
-    std::cout <<  winner->getName() << " Wins" << std::endl;
+    std::cout <<  winner->getName() << std::endl;
     
 
 

@@ -14,7 +14,7 @@ Human::Human(std::string name) {
 
 Move* Human::makeMove() {
     std::string namedMove;
-    std::cout << "Make Move: ";
+    //std::cout << "Make Move: ";
     std::cin >> namedMove;
     Move* humanMove = mvlist->checkValidMove(namedMove);
    //std::cout << "test human" << std::endl;

@@ -1,9 +1,7 @@
 #include "Paper.h"
 
 Paper::Paper(){
-    loses = {
-        {"Scissors",1},
-    };
+    loses = {{"Scissors",1},{"Rock",0}};
     name = "Paper";
 }
 

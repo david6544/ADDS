@@ -3,7 +3,7 @@
 
 Zombie::Zombie(){
     this->name = "Zombie";
-    this->loses = {{"Ninja",1},{"Robot",1}};
+    this->loses = {{"Ninja",1},{"Robot",1},{"Monkey",0},{"Pirate",0}};
 }
 
 std::string Zombie::getName() {

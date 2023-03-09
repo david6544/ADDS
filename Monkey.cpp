@@ -3,7 +3,7 @@
 
 Monkey::Monkey(){
     this->name = "Monkey";
-    this->loses = {{"Pirate",1},{"Zombie",1}};
+    this->loses = {{"Pirate",1},{"Zombie",1},{"Ninja",0},{"Robot",0}};
 }
 
 std::string Monkey::getName() {

@@ -3,7 +3,7 @@
 
 Ninja::Ninja(){
     this->name = "Ninja";
-    this->loses = {{"Robot",1},{"Monkey",1}};
+    this->loses = {{"Robot",1},{"Monkey",1},{"Zombie",0},{"Pirate",0}};
 }
 
 std::string Ninja::getName() {

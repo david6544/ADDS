@@ -3,7 +3,7 @@
 
 Robot::Robot(){
     this->name = "Robot";
-    this->loses = {{"Pirate",1},{"Monkey",1}};
+    this->loses = {{"Pirate",1},{"Monkey",1},{"Ninja",0},{"Zombie",0}};
 }
 
 std::string Robot::getName() {

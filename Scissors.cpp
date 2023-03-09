@@ -2,7 +2,7 @@
 
 Scissors::Scissors(){
     this->name = "Scissors";
-    this->loses = {{"Rock",1}};
+    this->loses = {{"Rock",1},{"Paper",0}};
 }
 
 std::string Scissors::getName(){

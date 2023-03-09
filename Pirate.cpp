@@ -3,7 +3,7 @@
 
 Pirate::Pirate(){
     this->name = "Pirate";
-    this->loses = {{"Ninja",1},{"Zombie",1}};
+    this->loses = {{"Ninja",1},{"Zombie",1},{"Robot",0},{"Monkey",0}};
 }
 
 std::string Pirate::getName() {

@@ -3,7 +3,7 @@
 
 Rock::Rock(){
     this->name = "Rock";
-    this->loses = {{"Paper",1}};
+    this->loses = {{"Paper",1},{"Scissors",0}};
 }
 
 std::string Rock::getName() {

@@ -20,10 +20,10 @@ Player* Referee::refGame(Player * p1, Player * p2) {
     //std::cout << m1->getlosses().size() << " " << m2->getlosses().size() << std::endl;
 
     //Checks which player wins
-    if (m2->getlosses().find(m1->getName()) != m2->getlosses().end() && m2->getlosses().at(m1->getName()) == 1) return p1;
+    /* if (m2->getlosses().find(m1->getName()) != m2->getlosses().end() && m2->getlosses().at(m1->getName()) == 1) return p1;
     else if (m1->getlosses().find(m2->getName()) != m1->getlosses().end() && m1->getlosses().at(m2->getName()) == 1) return p2;
     else {
         return nullptr;
-    }
+    } */
     return nullptr;
 }

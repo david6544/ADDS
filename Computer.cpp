@@ -1,13 +1,18 @@
 #include"Computer.h"
 #include<string>
 #include<iostream>
+#include"Rock.h"
 
 Computer::Computer() {
     this->Name = "Computer";
+    mvlist = new Movelist;
 }
 
-char Computer::makeMove() {
-    return 'R';
+Move* Computer::makeMove() {
+    std::string Cmove = "Ninja";
+    Move* Compmove = mvlist->checkValidMove(Cmove);
+    //std::cout << Compmove->getName() << std::endl;
+    return Compmove;
 }
 
 std::string Computer::getName() {

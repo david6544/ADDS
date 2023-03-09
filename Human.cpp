@@ -4,17 +4,20 @@
 
 Human::Human() {
     this->Name = "Human";
+    mvlist = new Movelist;
 }
 
 Human::Human(std::string name) {
     this->Name = name;
 }
 
-char Human::makeMove() {
-    char temp;
+Move* Human::makeMove() {
+    std::string namedMove;
     std::cout << "Make Move: ";
-    std::cin >> temp;
-    return temp;
+    std::cin >> namedMove;
+    Move* humanMove = mvlist->checkValidMove(namedMove);
+    //std::cout << "test human" << std::endl;
+    return humanMove;
 }
 
 std::string Human::getName() {

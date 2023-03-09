@@ -7,8 +7,9 @@
 class Computer: public Player{
 public:
     std::string Name;
+    Movelist* mvlist;
     Computer();
-    char makeMove();
+    Move* makeMove();
     std::string getName();
 };
 

@@ -5,13 +5,14 @@
 #include"Player.h"
 
 class Human: public Player{
-public:
-    std::string Name;
-
-    Human();
-    Human(std::string name);
-    char makeMove();
-    std::string getName();
+    private:
+        std::string Name;
+    public:
+        Movelist* mvlist;
+        Human();
+        Human(std::string name);
+        Move* makeMove();
+        std::string getName();
 };
 
 

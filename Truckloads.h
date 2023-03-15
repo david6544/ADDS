@@ -4,7 +4,6 @@
 class Truckloads {
 private:
 public:
-    int result = 0;
     Truckloads();
     int numTrucks(int numCrates, int loadSize);
 };

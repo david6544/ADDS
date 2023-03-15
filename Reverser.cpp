@@ -6,6 +6,8 @@ Reverser::Reverser() {
 }
 
 int Reverser::reverseDigit(int digit) {
+    if (digit < 0) return -1;
+
     if (digit == 0) return 0;
 
     int res = digit % 10;

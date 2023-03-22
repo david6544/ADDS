@@ -34,6 +34,19 @@ int main(void) {
 
     Bag<int> bag1;
 
+
+    //std::cout << bag1.bagOfStuff.size() << std::endl;
+/* 
+    for (int i = 0; i < 10; i++) {
+        bag1.addItem(i);
+    }
+    bag1.removeItem(); 
+    for (int i = 0; i < 9; i++) {
+        std::cout << bag1.bagOfStuff[i] << " ";
+    }
+    std::cout << std::endl;
+ */
+
     std::cout << sum_of_squares(n) << std::endl;
     printStar(4);
 

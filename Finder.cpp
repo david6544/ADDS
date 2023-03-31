@@ -22,16 +22,38 @@ vector<int> Finder::findSubstrings(string s1, string s2) {
             }
 
     } */
-
+    int startpos = 0;
     for (size_t i = 1; i <= s2.size(); i++) {
-        size_t found = s1.find(s2.substr(0,i));
+        size_t found = -1;
+        string curr = s2.substr(0,i);
+        bool yes = true;
 
-        if (found != string::npos) {
-            res[i-1] = found;
-        } else {
+        for (int j = startpos; j < s1.size(); j++) {
+
+            //cout << s1[j] << " " << curr[0] << " " << j << endl;
+
+            if (s1[j] == curr[0]) {
+            yes = true;
+                for (int k = 0; k < i; k++) {
+                    //cout << s1[j+k] << " " << curr[k] << endl;
+                    if (s1[j+k] != curr[k]) {
+                        yes = false;
+                        break;
+                    }
+                }
+            }
+            //cout << yes << endl;
+            if (yes) {
+                startpos = j;
+                res[i-1] = startpos;
+                break;
+            }
+            //cout << endl;
+        }
+        if (res[i-1] == -1) {
             return res;
         }
-
+        //cout << endl;
     }
 
     return res;

@@ -4,19 +4,24 @@
 using namespace std;
 
 vector<int> Finder::findSubstrings(string s1, string s2) {
-
     vector<int> res (s2.size(), -1);
+    if (s1.size() == 0 || s2.size() == 0) return res;
 
     for (size_t i = 1; i <= s2.size(); i++) {
+            string curr = s2.substr(0,i);
 
-            size_t found = s1.find(s2.substr(0, i)); //O(i*n)
-
-            if (found != string::npos) {
-                res[i-1] = found;
+            for (int j = 0; j < s1.size() - curr.size(); j++) {
+                //cout << s1.substr(j,curr.size()) << endl;
+                if (curr == s1.substr(j,curr.size())) {
+                    res[i-1] = j;
+                    break;
+                }
             }
+
     }
     return res;
-}/* 
+}
+
  
 int main(void) {
     std::string s1 = "4634554567";
@@ -32,6 +37,4 @@ int main(void) {
     }
 
     return 0;
-} */
-
-   
+}

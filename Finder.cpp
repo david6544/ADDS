@@ -14,10 +14,27 @@ vector<int> Finder::findSubstrings(string s1, string s2) {
             if (found == -1) break; 
         }
         if (found != string::npos) {
-            result[i] = found;
+            result[i-1] = found;
         }
     }
     return result;
 }
+/* 
+int main(void) {
+    std::string s1 = "4634554567";
+    std::string s2 = "45689";
+    
+    Finder f1;
+
+    std::vector<int> res = f1.findSubstrings(s1,s2);
+
+
+    for (int i = 0; i < res.size(); i++) {
+        std::cout << res[i] << " ";
+    }
+
+    return 0;
+}
+ */
 
    

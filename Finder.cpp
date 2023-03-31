@@ -20,7 +20,7 @@ vector<int> Finder::findSubstrings(string s1, string s2) {
     return res;
 }
 
- 
+ /* 
 int main(void) {
     std::string s1 = "4634554567";
     std::string s2 = "45689";
@@ -35,4 +35,4 @@ int main(void) {
     }
 
     return 0;
-}
+} */

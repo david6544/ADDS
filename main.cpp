@@ -14,14 +14,10 @@ int main(void) {
 
     std::vector<int> v1;
 
-    int n;
-    std::cin >> n;
 
-
-    for (int i = 0; i < n; i++) {
-        int temp;
-        std::cin >> temp;
-        v1.push_back(temp);
+    int input;
+    while (std::cin >> input) {
+        v1.push_back(input);
     }
 
     

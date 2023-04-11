@@ -1,5 +1,5 @@
-#include"BubbleSort.cpp"
-#include"QuickSort.cpp"
+#include"BubbleSort.h"
+#include"QuickSort.h"
 #include<iostream>
 #include<vector>
 

@@ -7,9 +7,9 @@ std::vector<int> BubbleSort::sort(std::vector<int> list) {
 
     while (hasSwapped) {
         hasSwapped = false;
-        for (int i = 0; i < list.size()-1; i++) {
-            if (list[i] < list[i+1]) {
-                std::swap(list[i], list[i+1]);
+        for (int i = 1; i < list.size(); i++) {
+            if (list[i-1] > list[i]) {
+                std::swap(list[i], list[i-1]);
                 hasSwapped = true;
             }
         }

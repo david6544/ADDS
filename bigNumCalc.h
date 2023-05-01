@@ -4,13 +4,13 @@
 #include<list>
 #include<string>
 
-class bigNumCalc
+class BigNumCalc
 {
 public:
 
     //defaults
-    bigNumCalc();
-    ~bigNumCalc();
+    BigNumCalc();
+    ~BigNumCalc();
 
     //customs
     std::list<int> buildBigNum(std::string numString); //creates a ll from the string

@@ -16,7 +16,7 @@ std::list<int> BigNumCalc::buildBigNum(std::string numString) {
     int array[numString.size()];
 
     //creating array to pass into ll;
-    for (int i = 0; i < numString.size(); i++) {
+    for (size_t i = 0; i < numString.size(); i++) {
         array[i] = numString[i] - '0';
     }
     
@@ -36,7 +36,7 @@ std::list<int> BigNumCalc::add(std::list<int> num1, std::list<int> num2) {
         num1 = num2;
         num2 = temp;
     }
-    int count = 0;
+    std::size_t count = 0;
     bool next = false;
     for (auto ri2=num2.rbegin(), ri1 = num1.rbegin(); ri2!=num2.rend(); ri2++, ri1++) {
         //adds the two lists together
@@ -76,7 +76,7 @@ std::list<int> BigNumCalc::sub(std::list<int> num1, std::list<int> num2) {
     while (num2.size() < num1.size()) {
         num2.push_front(0);
     }
-    int count = 0;
+    std::size_t count = 0;
     bool next = false;
     for (auto ri2 = num2.rbegin(), ri1 = num1.rbegin(); ri2 != num2.rend(); ri2++, ri1++) {
         //subtracts the two lists together
@@ -103,7 +103,7 @@ std::list<int> BigNumCalc::mul(std::list<int> num1, std::list<int> num2)
 {
     // multibly by 2
     int carry = 0;
-    int count = 0;
+    std::size_t count = 0;
     for (auto ri = num1.rbegin(); ri != num1.rend(); ri++) {
         *ri *= num2.front();
         *ri += carry;

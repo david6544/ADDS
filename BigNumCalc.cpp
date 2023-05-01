@@ -62,10 +62,10 @@ std::list<int> BigNumCalc::add(std::list<int> num1, std::list<int> num2) {
         num1.push_front(1);
     }
 
-   /*  //removing leading zeros
+    //removing leading zeros
     while(*num1.begin() == 0) {
         num1.pop_front();
-    } */
+    }
     
     return num1;
 }
@@ -117,6 +117,10 @@ std::list<int> BigNumCalc::mul(std::list<int> num1, std::list<int> num2)
         carry = *num1.begin() / 10;
         *num1.begin() %= 10;
         num1.push_front(carry);
+    }
+
+     while (*num1.begin() == 0) {
+        num1.pop_front();
     }
 
     return num1;

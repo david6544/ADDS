@@ -104,12 +104,15 @@ std::list<int> BigNumCalc::mul(std::list<int> num1, std::list<int> num2)
     // multibly by 2
     int carry = 0;
     std::size_t count = 0;
+    bool change = false;
     for (auto ri = num1.rbegin(); ri != num1.rend(); ri++) {
         *ri *= num2.front();
-        *ri += carry;
+        if (change) *ri += carry;
+        change = false;
         count++;
         if (*ri > 9 && count < num1.size()) {
             carry = *ri / 10;
+            change = true;
             *ri %= 10;
         }
     }

@@ -75,7 +75,11 @@ bool LinkedList::find_and_delete(int target) {
 		//checks if the next node is the one to delete
 		if (Curr->link->data == target) {
 			//deletes the next node
+			Node*Temp = Curr->link;
+
+			//chains the current node to the one past the end;
 			Curr->link = Curr->link->link;
+			delete Temp;
 			return true;
 		}
 		Curr = Curr->link;

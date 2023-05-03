@@ -36,8 +36,8 @@ void LinkedList::printList() {
 
 bool LinkedList::swap(int pos1, int pos2) {
 
-	if (pos1 == pos2) return true;
 	if (pos1 < 0 || pos2 < 0) return false;
+	//if (pos1 == pos2) return true;
 
 	if (pos1 < pos2) {
 		int temp = pos2;
@@ -51,7 +51,7 @@ bool LinkedList::swap(int pos1, int pos2) {
 	int data1 = 0;
 
 	for (int i = 0; i < pos1 && Curr != nullptr; i++) {
-		if (i == pos2) {
+		if (i == pos2 && i != pos1) {
 			data1 = Curr->data;
 			Node1 = Curr;
 		}

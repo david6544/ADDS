@@ -36,20 +36,23 @@ void LinkedList::printList() {
 
 bool LinkedList::swap(int pos1, int pos2) {
 
+	//check range
 	if (pos1 < 0 || pos2 < 0) return false;
-	//if (pos1 == pos2) return true;
 
+	//swap pos1 to be bigger
 	if (pos1 < pos2) {
 		int temp = pos2;
 		pos2 = pos1;
 		pos1 = temp;
 	}
+
+	//create nodes we need to use
 	Node* Curr = head;
-
 	Node* Node1 = head;
-
 	int data1 = 0;
 
+
+	// go until the chosen position and break if we hit a nullptr
 	for (int i = 0; i < pos1 && Curr != nullptr; i++) {
 		if (i == pos2 && i != pos1) {
 			data1 = Curr->data;
@@ -58,6 +61,7 @@ bool LinkedList::swap(int pos1, int pos2) {
 		Curr = Curr->link;
 	}
 	
+	//check if we are out of range
 	if (Curr != nullptr) {
 		Node1->data = Curr->data;
 		Curr->data = data1;

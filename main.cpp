@@ -1,4 +1,5 @@
 #include"Autocomplete.h"
+#include"PrefixMatcher.h"
 
 #include<vector>
 #include<iostream>
@@ -32,6 +33,21 @@ int main(void) {
     for (auto x : res) {
         cout << x << endl;
     }
+
+
+    PrefixMatcher* ptrie = new PrefixMatcher;
+
+    string w = "11001101";
+    string w1 = "110011011";
+    string w2 = "110011011101";
+
+
+    ptrie->insert(w,3);
+    ptrie->insert(w1,2);
+    ptrie->insert(w2,1);
+
+    std::cout << ptrie->selectRouter(w1) << std::endl;
+
 
     return 0;
 }

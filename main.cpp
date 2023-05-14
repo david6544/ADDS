@@ -1,4 +1,4 @@
-#include"Trie.h"
+#include"Autocomplete.h"
 
 #include<vector>
 #include<iostream>
@@ -14,7 +14,7 @@ int main(void) {
     string word4 = "height";
 
 
-    Trie* trie = new Trie();
+    Autocomplete* trie = new Autocomplete();
     //cout << "test" <<endl;
 
     //std::cout << trie->Root->letter << std::endl;

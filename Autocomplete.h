@@ -1,17 +1,17 @@
-#ifndef TRIE_H
-#define TRIE_H
+#ifndef AUTOCOMPLETE_H
+#define AUTOCOMPLETE_H
 
 #include"Node.h"
 #include<string>
 #include<vector>
 
-class Trie
+class Autocomplete
 {
 private:
-public:
     Node* Root;
-    Trie();
-    ~Trie();
+public:
+    Autocomplete();
+    ~Autocomplete();
 
     void insert(std::string word);
     std::vector<std::string> getSuggestions(std::string partialWord);
@@ -19,4 +19,4 @@ public:
 };
 
 
-#endif // TRIE_H
+#endif // AUTOCOMPLETE_H

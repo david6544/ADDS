@@ -17,7 +17,7 @@ int main(void) {
     Trie* trie = new Trie();
     //cout << "test" <<endl;
 
-    std::cout << trie->Root->letter << std::endl;
+    //std::cout << trie->Root->letter << std::endl;
 
 
     trie->insert(word);

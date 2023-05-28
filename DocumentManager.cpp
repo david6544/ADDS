@@ -1,11 +1,11 @@
-#include "Database.h"
+#include "DocumentManager.h"
 #include"User.h"
 
-Database::Database()
+DocumentManager::DocumentManager()
 {
 }
 
-void Database::addDocument(std::string name, int id, int license_limit){
+void DocumentManager::addDocument(std::string name, int id, int license_limit){
     File* newFile = new File();
     newFile->name = name;
     newFile->identifier = id;
@@ -15,13 +15,13 @@ void Database::addDocument(std::string name, int id, int license_limit){
     this->filesByID[id] = newFile;
 }
 
-void Database::addPatron(int patronID)
+void DocumentManager::addPatron(int patronID)
 {
     User* newUser = new User(patronID);
     this->users[patronID] = newUser;
 }
 
-int Database::search(std::string name)
+int DocumentManager::search(std::string name)
 {
     if (files.find(name) != files.end()) {
         int returnID = files[name]->identifier;
@@ -30,7 +30,7 @@ int Database::search(std::string name)
     return 0;
 }
 
-bool Database::borrowDocument(int docID, int patronID)
+bool DocumentManager::borrowDocument(int docID, int patronID)
 {
     if ((users.find(patronID) != users.end()) && 
     (filesByID.find(docID) != filesByID.end()) && 
@@ -41,7 +41,7 @@ bool Database::borrowDocument(int docID, int patronID)
     return false;
 }
 
-void Database::returnDocument(int docID, int patronID){
+void DocumentManager::returnDocument(int docID, int patronID){
     filesByID[docID]->borrowers.erase(patronID);
 }
 

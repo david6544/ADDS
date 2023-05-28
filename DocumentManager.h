@@ -1,5 +1,5 @@
-#ifndef DATABASE_H
-#define DATABASE_H
+#ifndef DOCUMENTMANAGER_H
+#define DOCUMENTMANAGER_H
 
 #include"User.h"
 #include"File.h"
@@ -8,7 +8,7 @@
 #include<vector>
 #include<string>
 
-class Database
+class DocumentManager
 {
 private:
 
@@ -17,7 +17,7 @@ private:
     std::unordered_map<int,File*> filesByID; // id -> File
     std::unordered_map<int,User*> users; // patronID -> User
 public:
-    Database(/* args */);
+    DocumentManager(/* args */);
 
     void addDocument(std::string name, int id, int license_limit);
     void addPatron(int patronID);
@@ -25,4 +25,4 @@ public:
     bool borrowDocument(int docID, int patronID);
     void returnDocument(int docID, int patronID);
 };
-#endif // DATABASE_H
+#endif // DOCUMENTMANAGER_H
